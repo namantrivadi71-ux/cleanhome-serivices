@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleanHome Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">CleanHome Services</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#customers">Customers</a></li>
+                <li><button class="nav-btn" onclick="openBookingForm()">Book Now</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Professional Home Cleaning Services</h1>
+            <p>Don't have time for cleaning? Let our trained professionals handle it! We provide deep cleaning for houses, flats, and offices.</p>
+            <button class="cta-btn" onclick="openBookingForm()">Get a Free Quote</button>
+        </div>
+    </section>
+<!-- About Section -->
+<section id="about" style="padding: 50px; text-align: center;">
+    <h2>About Us</h2>
+    <p>Humari company professional aur deep cleaning services provide karti hai, taaki aapka ghar hamesha saaf rahe.</p>
+</section>
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="card">
+                <h3>Deep Cleaning</h3>
+                <p>Complete house and office deep cleaning.</p>
+            </div>
+            <div class="card">
+                <h3>Bathroom & Kitchen</h3>
+                <p>Hygienic and spotless kitchen and bathroom cleaning.</p>
+            </div>
+            <div class="card">
+                <h3>Sofa & Carpet</h3>
+                <p>Dry and wet cleaning of sofas and carpets.</p>
+            </div>
+            <div class="card">
+                <h3>Pest Control</h3>
+                <p>Keep your home safe from unwanted pests.</p>
+            </div>
+            <div class="card">
+                <h3>Festive deep cleaning</h3>
+                <p>Tyohar special cleaning.</p>
+            </div>
+            <div class="card">
+                <h3>AC & Appliance cleaning</h3>
+                <p>AC & fridge.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Customers Section -->
+    <section id="customers" class="customers">
+        <h2>Who We Serve</h2>
+        <ul>
+            <li>👨‍💼 Working Professionals</li>
+            <li>👨‍👩‍👧‍👦 Families</li>
+            <li>👵 Senior Citizens</li>
+            <li>🎓 Students in Hostels/Rented Rooms</li>
+        </ul>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Start-up Idea: High demand, regular customers, and employment generation.</p>
+        <p>© 2026 CleanHome Services. All Rights Reserved.</p>
+    </footer>
+<!-- Booking Form Popup (Modal) -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeBookingForm()">&times;</span>
+            <h2>Book a Cleaning Service</h2>
+            <form id="bookingForm" onsubmit="sendToWhatsApp(event)">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+
+                <label for="service">Select Service:</label>
+                <select id="service" required>
+                    <option value="Deep Cleaning">Deep Cleaning</option>
+                    <option value="Bathroom & Kitchen Cleaning">Bathroom & Kitchen</option>
+                    <option value="Sofa & Carpet Cleaning">Sofa & Carpet</option>
+                    <option value="Pest Control">Pest Control</option>
+                    <option value="Festive deep cleaning">festival home cleaning</option>
+                    <option value="AC & fridge">AC & Appliances cleaning</option>
+                </select>
+
+                <label for="address">Your Address:</label>
+                <!-- Local customers ke liye placeholder -->
+                <textarea id="address" placeholder="e.g., Muzaffarpur, Bihar" rows="3" required></textarea>
+<input type="tel" id="userPhone" placeholder="Your Phone Number" required>
+<input type="date" id="bookingDate" required>
+                <button type="submit" class="submit-btn">Send via WhatsApp</button>
+            </form>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
